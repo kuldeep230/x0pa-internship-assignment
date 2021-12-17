@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import FilterUI from "./components/FilterUI";
 import axios from "axios";
