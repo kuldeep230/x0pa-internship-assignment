@@ -16,6 +16,7 @@ function SearchTodo({ formData, setFormData, completed, setCompleted }) {
 
   return (
     <div className="search-container">
+      <p className="searchTodoInfo">Search for your Todos</p>
       <form className="searchtodo-form">
         <div className="search-userids searchtodo-inputs">
           <label htmlFor="userId">userId: </label>

@@ -37,8 +37,11 @@ const FilterUI = ({
             setCompleted={setCompleted}
           />
         </div>
-        {/* <p> {filteredTodo.length !== 0 ? "Match Found!!" : "All TODOS"} </p> */}
         <div className="list-todos">
+          <p className="displayTodoinfo">
+            {" "}
+            {filteredTodo.length !== 0 ? "Match Found!!" : "All TODOS!"}{" "}
+          </p>
           <Pagination
             todosPerPage={todosPerPage}
             totalTodos={totalTodos}

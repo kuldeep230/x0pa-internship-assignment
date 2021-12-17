@@ -2,12 +2,19 @@
   height: 25em;
   padding: 1em 1em;
   font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.search-container .searchTodoInfo {
+  text-align: center;
 }
 
 .searchtodo-form {
   display: flex;
-  flex-grow: 1;
-  gap: 1em;
+  gap: 2em;
+  flex-grow: 0.1;
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
@@ -18,7 +25,9 @@
 }
 
 .searchtodo-form input {
-  width: 3em;
+  width: 4em;
+  padding: 0.5em;
+  font-size: 0.8em;
 }
 
 .searchtodo-form input::-webkit-outer-spin-button,
