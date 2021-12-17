@@ -18,6 +18,8 @@ const FilterUI = ({
   totalTodos,
   paginate,
   currentPage,
+  todoTitle,
+  setTodoTitle,
 }) => {
   useEffect(() => {
     getTodos();
@@ -35,9 +37,11 @@ const FilterUI = ({
             setFormData={setFormData}
             completed={completed}
             setCompleted={setCompleted}
+            todoTitle={todoTitle}
+            setTodoTitle={setTodoTitle}
           />
         </div>
-        <div className="list-todos">
+        <div className="all-todos">
           <p className="displayTodoinfo">
             {" "}
             {filteredTodo.length !== 0 ? "Match Found!!" : "All TODOS!"}{" "}
@@ -48,13 +52,15 @@ const FilterUI = ({
             paginate={paginate}
             currentPage={currentPage}
           />
-          {loading ? (
-            <p>Loading...</p>
-          ) : filteredTodo.length !== 0 ? (
-            filteredTodo.map((todo) => <Todo key={todo.id} todo={todo} />)
-          ) : (
-            todos.map((todo) => <Todo key={todo.id} todo={todo} />)
-          )}
+          <div className="list-todos">
+            {loading ? (
+              <p>Loading...</p>
+            ) : filteredTodo.length !== 0 ? (
+              filteredTodo.map((todo) => <Todo key={todo.id} todo={todo} />)
+            ) : (
+              todos.map((todo) => <Todo key={todo.id} todo={todo} />)
+            )}
+          </div>
         </div>
       </div>
     </div>

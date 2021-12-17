@@ -44,3 +44,16 @@
   outline: none;
   border: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .searchjob-container .searchjob-form {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .searchjob-form .searchjob-input {
+    width: clamp(10em, 90vw, 50em);
+  }
+  .searchjob-form .searchjob-btn {
+    padding: 0.6em 1em;
+  }
+}

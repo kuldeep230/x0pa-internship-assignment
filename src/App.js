@@ -12,12 +12,13 @@ function App() {
     userId: "",
     id: "",
   });
+  const [todoTitle, setTodoTitle] = useState("");
+  const [completed, setCompleted] = useState(true);
   const [loading, setLoading] = useState(false);
   const [todos, setTodos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [todosPerPage] = useState(10);
   const [filteredTodo, setFilteredTodo] = useState([]);
-  const [completed, setCompleted] = useState(true);
 
   const getTodos = async () => {
     try {
@@ -43,9 +44,10 @@ function App() {
     let temp = [];
     for (let i = 0; i < todos.length; i++) {
       if (
-        todos[i].userId === formData.userId &&
-        todos[i].id === formData.id &&
-        todos[i].completed === completed
+        (todos[i].userId === formData.userId &&
+          todos[i].id === formData.id &&
+          todos[i].completed === completed) ||
+        todos[i].title === todoTitle.trim()
       ) {
         temp.push(todos[i]);
       }
@@ -72,6 +74,8 @@ function App() {
         setCurrentPage={setCurrentPage}
         paginate={paginate}
         currentPage={currentPage}
+        todoTitle={todoTitle}
+        setTodoTitle={setTodoTitle}
       />
       <Footer />
     </div>

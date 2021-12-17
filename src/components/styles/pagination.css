@@ -1,5 +1,6 @@
 .pagination-nav ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5em;
 }
 
@@ -15,6 +16,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .pagination-nav ul li:hover {
   background-color: rgb(0, 126, 255);
   color: rgb(239, 239, 239);
@@ -23,4 +25,24 @@
 .pagination-nav ul .active {
   background-color: rgb(0, 126, 255);
   color: rgb(239, 239, 239);
+}
+
+@media only screen and (max-width: 640px) {
+  .pagination-nav {
+    margin: 0 auto;
+    width: 75%;
+  }
+  .pagination-nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+  .pagination-nav {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .pagination-nav ul {
+    flex-wrap: wrap;
+  }
 }

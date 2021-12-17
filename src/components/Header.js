@@ -7,7 +7,7 @@ function Header() {
       <div className="web-title">
         <span>Landing.jobs</span>
       </div>
-      <nav className="site-nav">
+      <nav className="site-nav hidden-menu">
         <ul>
           <li>Jobs</li>
           <li>Resources</li>
