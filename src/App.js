@@ -18,6 +18,7 @@ function App() {
   const [todosPerPage] = useState(10);
   const [filteredTodo, setFilteredTodo] = useState([]);
   const [completed, setCompleted] = useState(true);
+  const [active, setActive] = useState(true);
 
   const getTodos = async () => {
     try {
@@ -71,6 +72,7 @@ function App() {
         totalTodos={todos.length}
         setCurrentPage={setCurrentPage}
         paginate={paginate}
+        currentPage={currentPage}
       />
       <Footer />
     </div>

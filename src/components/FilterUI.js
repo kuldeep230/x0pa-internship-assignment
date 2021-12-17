@@ -17,6 +17,7 @@ const FilterUI = ({
   todosPerPage,
   totalTodos,
   paginate,
+  currentPage,
 }) => {
   useEffect(() => {
     getTodos();
@@ -42,6 +43,7 @@ const FilterUI = ({
             todosPerPage={todosPerPage}
             totalTodos={totalTodos}
             paginate={paginate}
+            currentPage={currentPage}
           />
           {loading ? (
             <p>Loading...</p>

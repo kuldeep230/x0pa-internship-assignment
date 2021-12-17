@@ -18,7 +18,7 @@
 
 .searchjob-form .searchjob-input {
   width: 50em;
-  height: 2.2em;
+  height: 2.7em;
   padding: 0 1em;
 }
 
@@ -32,7 +32,7 @@
   border-radius: 2px;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 .searchjob-form .searchjob-btn:hover {
